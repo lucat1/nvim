@@ -50,9 +50,6 @@ jobs:
       - name: Configure xbps-src
         run: bash scripts/configure.sh
 
-      - name: Bootstrap void-packages
-        run: ./void-packages/xbps-src binary-bootstrap
-
       - name: Generate template
         run: make template
 
