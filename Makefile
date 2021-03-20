@@ -1,7 +1,9 @@
-all: bootstrap template build sign
+all: clone bootstrap template build sign
+
+clone:
+	bash scripts/clone.sh
 
 bootstrap:
-	bash scripts/clone.sh
 	./void-packages/xbps-src binary-bootstrap
 
 template:
