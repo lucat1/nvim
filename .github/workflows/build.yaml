@@ -1,6 +1,4 @@
-name: Check PR
-
-on: pull_request
+name: Build daily
 
 jobs:
   build:
