@@ -57,7 +57,13 @@ jobs:
         run: make build
 
       - name: Sign nvim
-        run: make sign
+        env:
+          PRIVATE_PEM: ${{ secrets.PRIVATE_PEM }}
+          PRIVATE_PEM_PUB: ${{ secrets.PRIVATE_PEM_PUB }}
+        run: |
+          echo $PRIVATE_PEM > private.pem
+          echo $PRIVATE_PEM_PUB > private.pem.pub
+          make sign
 
       # TODO: reimplement
       # - name: Show files
