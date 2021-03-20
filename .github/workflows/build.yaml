@@ -50,8 +50,14 @@ jobs:
       - name: Configure xbps-src
         run: bash scripts/configure.sh
 
-      - name: Build and sign
-        run: make all
+      - name: Bootstrap void-packages
+        run: make bootstrap
+
+      - name: Build nvim
+        run: make build
+
+      - name: Sign nvim
+        run: make sign
 
       # TODO: reimplement
       # - name: Show files

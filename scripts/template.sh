@@ -26,7 +26,6 @@ echo "tarfile: $tarfile"
 wget $url -O $tarfile
 sha=$(sha256sum $tarfile | awk '{print $1;}')
 tar xfz $tarfile -C $builddir
-ls $builddir
 wrksrc=$(ls $builddir | grep -v '\.')
 
 echo "sha: $sha"
