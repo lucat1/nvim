@@ -69,6 +69,12 @@ jobs:
       - name: Sign nvim
         run: make sign
 
+      - name: Deploy to Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages
+          folder: void-packages/hostdir/binpkgs
+
       # TODO: reimplement
       # - name: Show files
       #   run: |
