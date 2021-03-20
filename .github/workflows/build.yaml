@@ -44,6 +44,12 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Clone void-packages
+        run: bash scripts/clone.sh
+
+      - name: Configure xbps-src
+        run: bash scripts/configure.sh
+
       - name: Build and sign
         run: make all
 
