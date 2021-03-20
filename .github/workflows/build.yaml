@@ -53,6 +53,9 @@ jobs:
       - name: Bootstrap void-packages
         run: make bootstrap
 
+      - name: Generate template
+        run: make template
+
       - name: Build nvim
         run: make build
 
