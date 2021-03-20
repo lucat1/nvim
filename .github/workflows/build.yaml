@@ -51,11 +51,7 @@ jobs:
         run: bash scripts/configure.sh
 
       - name: Bootstrap void-packages
-        run: |
-          cd void-packages
-          ls -al
-          cat etc/conf
-          ./xbps-src binary-bootstrap
+        run: ./void-packages/xbps-src binary-bootstrap
 
       - name: Generate template
         run: make template
