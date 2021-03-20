@@ -45,7 +45,7 @@ jobs:
           fetch-depth: 1
 
       - name: Build and sign
-        run: make clean all
+        run: make all
 
       # TODO: reimplement
       # - name: Show files
