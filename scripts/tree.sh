@@ -26,15 +26,6 @@ else
   echo "<hr><pre><a href="$url$(dirname $rel)">../</a>" >> $out
 fi
 
-# <a href="current/">current/</a>                                           20-Mar-2021 14:06                   -
-# <a href="distfiles/">distfiles/</a>                                         01-Jan-2021 15:47                   -
-# <a href="docs/">docs/</a>                                              20-Mar-2021 14:00                   -
-# <a href="live/">live/</a>                                              16-Mar-2021 23:36                   -
-# <a href="logos/">logos/</a>                                             14-Mar-2021 23:08                   -
-# <a href="static/">static/</a>                                            13-Mar-2020 00:25                   -
-# <a href="void-updates/">void-updates/</a>                                      20-Mar-2021 04:11                   -
-# <a href="xlocate/">xlocate/</a>                                           20-Mar-2021 06:01                   -
-
 for f in $dir/*;do
   file=$(basename $f)
   if [ "$file" == "index.html" ]; then
