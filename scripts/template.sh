@@ -37,6 +37,7 @@ pkgname=nvim
 version="$version"
 revision=0
 build_style=cmake
+configure_args=CMAKE_BUILD_TYPE=RelWithDebInfo
 build_helper="qemu"
 hostmakedepends="pkg-config gettext gperf LuaJIT lua51-lpeg lua51-mpack"
 makedepends="libtermkey-devel libuv-devel libvterm-devel msgpack-devel LuaJIT-devel
